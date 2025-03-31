@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Formulario Dinámico</h2>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div formArrayName="items">
+        <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+          <input type="text" formControlName="name" placeholder="Ingrese un valor">
+          <button type="button" (click)="removeItem(i)">Eliminar</button>
+        </div>
+      </div>
+      <button type="button" (click)="addItem()">Agregar Campo</button>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  
