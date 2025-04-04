@@ -1,0 +1,13 @@
+<form [formGroup]="preguntaForm" (ngSubmit)="guardarCambios()">
+    <label>Pregunta:</label>
+    <input type="text" formControlName="texto">
+  
+    <label>Tipo de pregunta:</label>
+    <select formControlName="tipo">
+      <option value="texto">Texto</option>
+      <option value="seleccion">Selección</option>
+    </select>
+  
+    <button type="submit">Guardar</button>
+  </form>
+  
